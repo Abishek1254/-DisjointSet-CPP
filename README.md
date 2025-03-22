@@ -1,32 +1,25 @@
 # Disjoint Set Data Structure (Union-Find) in C++
 
-A C++ implementation of the Disjoint Set Data Structure with **path compression** and **union by rank/size**.
+A **C++ implementation** of the **Disjoint Set Data Structure** (also known as **Union-Find**) with **path compression** and **union by rank/size**. This data structure is widely used in algorithms involving connected components, such as Kruskal’s algorithm for Minimum Spanning Trees (MST), network connectivity, and more.
+
+---
 
 ## Features
-- **Find**: Find the root(ultimate parent) of a set.
-- **Union**: Merge two sets using either rank or size.
-- **isConnected**: Check if two elements are in the same set.
 
-## Usage
+- **Find**: Find the root of a set with **path compression** for optimal performance.
+- **Union**: Merge two sets using either **union by rank** or **union by size** to keep the tree balanced.
+- **isConnected**: Check if two elements belong to the same set.
+- **Easy to Use**: Simply include the `DisjointSet.h` header file in your project.
 
-1. Include the `DisjointSet.h` header file in your project.
-2. Create a `DisjointSet` object with the number of elements.
-3. Use the `unionByRank`, `unionBySize`, and `findUpar` methods to manage sets.
+---
 
-### Example
-See the `main.cpp` file for an example usage:
+## How to Use
+1. Download the `DisjointSet.h` file.
+2. Place it in your project’s include directory or system-wide include path (e.g., `/usr/local/include` on Linux/macOS).
+3. Include it in your code:
+   ```cpp
+   #include <DisjointSet.h>
 
-```cpp
-#include "DisjointSet.h"
-
-int main() {
-    DisjointSet ds(5);
-    ds.unionBySize(1, 2);
-    ds.unionBySize(3, 4);
-
-    if (ds.isConnected(1, 2)) {
-        cout << "1 and 2 are connected!" << endl;
-    }
-
-    return 0;
-}
+Alternatively, you can clone the entire repository:
+```bash
+git clone https://github.com/Abishek1254/-DisjointSet-CPP.git
